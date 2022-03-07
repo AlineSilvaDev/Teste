@@ -1,0 +1,16 @@
+
+const input = prompt('Digite quantos números haverão em seu array ímpar:');
+
+var array;
+
+for(i=0;i<input;i++){
+    
+    array[i]= prompt("Digite o numero:");
+}
+
+array.sort((a, b)=>a-b);
+
+var posicao = (input/2)+0.5;
+var mediana = array[posicao];
+
+console.log("a mediana é:"+mediana);
