@@ -1,0 +1,22 @@
+const texto = prompt('Digite a string a ser encriptada:');
+
+var textofinal=texto.split(' ').join(''); //
+
+var num = textofinal.length; //cálculo do tamanho da string
+
+var T = Math.ceil(Math.sqrt(num)); //primeiro faz a raiz quadrada e depois arredonda 
+//para o numero inteiro maior ou igual mais próximo
+
+var mensagem;
+
+
+for (i=0; i<=T ; i++){
+    mensagem += textofinal[i]
+    for(j=T; j<=num ; j+T){
+        mensagem += textofinal[j];
+    }
+    mensagem += "";
+}
+
+
+console.log("A mensagem encriptada é: "+ mensagem);
